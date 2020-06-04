@@ -1,37 +1,20 @@
 import express from 'express';
 
 const router = express.Router();
+import AdoptController from './controllers/AdoptController';
+import LoginController from './controllers/LoginController';
+import AccountController from './controllers/AccountController';
 
-const json = {
-    'message': 'hi'
-};
+router.post('/account', AccountController.create); //criando conta
 
-router.post('/account', (req, res) => { //criando conta
-    return res.json(json);
-});
+router.post('/login', LoginController.login); //login
 
-router.post('/login', (req, res) => { //login
-    return res.json(json);
-});
 
-router.get('/events', (req, res) => { //eventos que estou participando
-    return res.json(json);
-});
+router.get('/adopts', AdoptController.list); //adoções disponíveis
 
-router.put('/events', (req, res) => { //criando evento
-    return res.json(json);
-});
 
-router.delete('/events/:id', (req, res) => { //apagando evento se eu for organizador
-    return res.json(json);
-});
+router.put('/adopts', AdoptController.create); //criando adoção
 
-router.post('/events', (req, res) => { //atualizando evento
-    return res.json(json);
-});
-
-router.post('/events/:id', (req, res) => { //entrando num evento
-    return res.json(json);
-});
+router.delete('/adopts/:id', AdoptController.delete); //apagando uma adoção
 
 export default router;

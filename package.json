@@ -3,7 +3,7 @@
   "author": {
     "name": "robertosamuelx"
   },
-  "description": "Backend da aplicação little-role",
+  "description": "Backend da aplicação adote.me",
   "scripts": {
     "start": "ts-node-dev src/index.ts"
   },
