@@ -6,6 +6,7 @@ import LoginController from './controllers/LoginController';
 import AccountController from './controllers/AccountController';
 
 router.post('/account', AccountController.create); //criando conta
+router.get('/account', AccountController.list); //criando conta
 
 router.post('/login', LoginController.login); //login
 

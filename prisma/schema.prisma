@@ -23,3 +23,13 @@ model Profile {
   idAccount Int @unique
   account Account @relation(fields: [idAccount],references: [id])
 }
+
+model Adopt {
+  id Int @id @default(autoincrement())
+  quantity  Int?
+  postedAt DateTime @default(now())
+  where String?
+  animal String
+  idProfile Int
+  whoPosted Profile @relation(fields: [idProfile],references: [id])
+}
