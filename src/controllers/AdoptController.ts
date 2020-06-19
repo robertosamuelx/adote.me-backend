@@ -11,7 +11,15 @@ export default {
         return res.json(json);
     },
 
+    edit(req:Request, res:Response){
+        return res.json(json);
+    },
+
     list(req: Request, res: Response){
+        return res.json(json);
+    },
+
+    show(req: Request, res: Response){
         return res.json(json);
     },
 

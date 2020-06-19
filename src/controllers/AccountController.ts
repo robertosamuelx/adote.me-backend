@@ -22,6 +22,11 @@ export default {
 
         return res.status(200).json({'id':account.id});
     },
+
+    edit(req:Request, res:Response){
+        return res.json({message: 'ok'});
+    },
+
     async list(req: Request, res: Response){
         const profiles = await prisma.account.findMany();
 
@@ -29,8 +34,8 @@ export default {
     },
 
     async delete(req: Request, res: Response){ //não ta funfando
-        const {count} = await prisma.account.deleteMany({});
+        //const {count} = await prisma.account.deleteMany({});
 
-        return res.json({count});
+        return res.json({message: 'ok'});
     }
 };
